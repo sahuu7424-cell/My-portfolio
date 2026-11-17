@@ -1,0 +1,550 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sahil | Web Developer</title>
+
+<style>
+
+/* BASIC SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080e1c;
+    color: white;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #101a30;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: #a78bfa;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #a78bfa;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #111c3d,
+        #452080,
+        #123d75
+    );
+}
+
+.tag {
+    background: #ffffff20;
+    color: #ddd6fe;
+    padding: 8px 18px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    color: #c4b5fd;
+}
+
+.hero h3 {
+    color: #ddd6fe;
+    font-size: 21px;
+}
+
+.hero p {
+    max-width: 550px;
+    color: #e2e8f0;
+    margin: 20px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    background: #a78bfa;
+    color: #111827;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* COMMON SECTION */
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 65px 20px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 30px;
+    color: #c4b5fd;
+    margin-bottom: 35px;
+}
+
+.card {
+    background: #14213a;
+    border: 1px solid #293c5b;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #a78bfa;
+}
+
+.card h3 {
+    color: #a78bfa;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #cbd5e1;
+}
+
+/* SKILLS */
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+}
+
+.skill {
+    background: #14213a;
+    border: 1px solid #394c70;
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 12px;
+    color: #ddd6fe;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    background: #452080;
+    transform: translateY(-4px);
+}
+
+/* SERVICES */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.price {
+    font-size: 30px;
+    color: #c4b5fd;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* OFFER */
+
+.offer {
+    background: linear-gradient(135deg, #452080, #174b83);
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 20px;
+}
+
+.offer h2 {
+    font-size: 30px;
+}
+
+.offer p {
+    margin: 15px 0;
+    color: #e2e8f0;
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    color: #cbd5e1;
+    margin: 12px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #101a30;
+    padding: 25px;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* MOBILE DESIGN */
+
+@media(max-width: 600px) {
+
+    nav {
+        padding: 16px 12px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0 5px;
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero h3 {
+        font-size: 17px;
+    }
+
+    .heading {
+        font-size: 25px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+    <div class="logo">SAHIL.</div>
+
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+    <div class="tag">Welcome to My Portfolio</div>
+
+    <h1>Hi, I'm <span>Sahil</span></h1>
+
+    <h3>Web Developer | Tech Enthusiast</h3>
+
+    <p>
+        I am a college student passionate about
+        web development, app development and technology.
+        I love learning new skills and turning ideas
+        into useful digital experiences.
+    </p>
+
+    <a href="#about" class="btn">Explore My Work</a>
+
+    <a href="#contact" class="btn">Hire Me</a>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="container" id="about">
+
+    <h2 class="heading">About Me</h2>
+
+    <div class="card">
+
+        <h3>Who Am I?</h3>
+
+        <p>
+            Hello! My name is Sahil.
+
+            I am currently a first-year college student
+            with a strong interest in technology and
+            software development.
+
+            I enjoy creating websites, learning programming
+            and exploring new digital tools.
+
+            My goal is to become a skilled developer,
+            work on real-world projects and build
+            something meaningful through technology.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section class="container" id="skills">
+
+    <h2 class="heading">My Technical Skills</h2>
+
+    <div class="skills">
+
+        <div class="skill">HTML</div>
+
+        <div class="skill">CSS</div>
+
+        <div class="skill">Python</div>
+
+        <div class="skill">JavaScript (Learning)</div>
+
+        <div class="skill">Tally & Tally Prime</div>
+
+        <div class="skill">MS Word</div>
+
+        <div class="skill">MS Excel</div>
+
+        <div class="skill">Computer Skills</div>
+
+    </div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section class="container">
+
+    <h2 class="heading">My Knowledge & Experience</h2>
+
+    <div class="card">
+
+        <h3>Web Development</h3>
+
+        <p>
+            I have practical knowledge of HTML and CSS.
+            I am also learning JavaScript to improve
+            my website development skills.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h3>Programming</h3>
+
+        <p>
+            I have knowledge of Python programming
+            and I am continuously improving my coding skills.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h3>Computer & Accounting</h3>
+
+        <p>
+            I have good knowledge of Tally and Tally Prime,
+            along with MS Word and MS Excel.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="container" id="services">
+
+    <h2 class="heading">Services I Offer</h2>
+
+    <div class="services">
+
+        <div class="card">
+
+            <h3>Website Development</h3>
+
+            <p>
+                Simple, clean and attractive websites
+                for individuals and small businesses.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Personal Portfolio</h3>
+
+            <p>
+                Personal websites to showcase your
+                introduction, skills and work.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Business Website</h3>
+
+            <p>
+                Basic websites to present your
+                business, services and contact details.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SPECIAL OFFER -->
+
+<section class="container">
+
+    <div class="offer">
+
+        <h2>Want Your Own Website?</h2>
+
+        <p>
+            Want to create a personal portfolio
+            or a website for your business?
+
+            Let's turn your idea into a website!
+        </p>
+
+        <div class="price">Starting at ₹499</div>
+
+        <a href="#contact" class="btn">
+            Contact Me
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- GOALS -->
+
+<section class="container">
+
+    <h2 class="heading">My Vision</h2>
+
+    <div class="card">
+
+        <p>
+            I believe that learning never stops.
+
+            I am working every day to improve my
+            technical knowledge, develop new skills
+            and become a professional developer.
+
+            Small steps today can create a better
+            future tomorrow.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="container contact" id="contact">
+
+    <h2 class="heading">Let's Connect</h2>
+
+    <div class="card">
+
+        <h3>Have a Website Idea?</h3>
+
+        <p>
+            If you want a personal website or a
+            simple business website, feel free
+            to contact me.
+        </p>
+
+        <p>
+            I would love to work on your idea!
+        </p>
+
+        <a href="https://www.instagram.com/"
+           class="btn" target="_blank">
+           Contact on Instagram
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3 style="color:#a78bfa;">SAHIL.</h3>
+
+    <p>Learning | Creating | Growing</p>
+
+    <p>© 2026 Sahil. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>
